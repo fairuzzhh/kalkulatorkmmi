@@ -1,0 +1,68 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #51c4d3, #126e82);
+}
+
+.grid-kalkulator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 684px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-kalkulator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color:#d8e3e7;
+}
+
+.grid-kalkulator > button:hover {
+    background-color:#e9f0f3;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/ -1;
+    background-color: #132c33;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .operand-sebelumnya {
+    color: #d8e3e7;
+    font-size: 1.5rem;
+}
+
+.output .operand-terkini {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.waktu {
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    height: 70px;
+}
+
+

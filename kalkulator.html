@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Kalkulator</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="grid-kalkulator">
+        <div class="output">
+            <div data-operand-sebelumnya class="operand-sebelumnya"></div>
+            <div data-operand-terkini class="operand-terkini"></div>
+        </div>
+        <button data-hapus-semua class="span-two">AC</button>
+        <button data-hapus>DEL</button>
+        <button data-operator=>÷</button>
+        <button data-nomor>1</button>
+        <button data-nomor>2</button>
+        <button data-nomor>3</button>
+        <button data-operator>*</button>
+        <button data-nomor>4</button>
+        <button data-nomor>5</button>
+        <button data-nomor>6</button>
+        <button data-operator>+</button>
+        <button data-nomor>7</button>
+        <button data-nomor>8</button>
+        <button data-nomor>9</button>
+        <button data-operator>-</button>
+        <button data-nomor>.</button>
+        <button data-nomor>0</button>
+        <button data-sama-dengan class="span-two">=</button>
+    </div>
+    <div class="waktu">
+    <script type='text/javascript'>
+        var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+        var tgl = new Date();
+        var tanggal = tgl.getDate();
+        var month = tgl.getMonth();
+        var hariIni = tgl.getDay(),
+            hariIni = hari[hariIni];
+        var yy = tgl.getYear();
+        var tahun = (yy < 1000) ? yy + 1900 : yy;
+        var a_p = "";
+        var d = new Date();
+        var jam_skrg = d.getHours();
+        if (jam_skrg < 12) {
+         a_p = "AM";
+        } else {
+         a_p = "PM";
+        }
+        if (jam_skrg == 0) {
+        jam_skrg = 12;
+        }
+        if (jam_skrg > 12) {
+        jam_skrg = jam_skrg - 12;
+        }
+
+       var menit_skrg = d.getMinutes();
+       menit_skrg = menit_skrg + "";
+       if (menit_skrg.length == 1) {
+       menit_skrg = "0" + menit_skrg;
+       }
+        document.write(hariIni + ', ' + tanggal + ' ' + bulan[month] + ' ' + tahun +'  ' + jam_skrg + ":" + menit_skrg + " " + a_p);
+    </script>
+    </div>
+</body>
+</html>
